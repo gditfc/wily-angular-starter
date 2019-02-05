@@ -1,0 +1,23 @@
+<nav class="nav_bar nav_color nav_shadow">
+  <div class="nav_wrap nav_gradient">
+    <div style="display:inline-flex;">
+        <div style="display: inline-flex;">
+          <div class="bar_1"></div>
+          <div class="bar_2"></div>
+          <div class="bar_3"></div>
+        </div>
+        <a routerLink=""><div class="logo"></div></a>
+    </div>
+      <div class="center_center">
+
+          <div class="mobile_btn"  (click)="openMenu()"><i class="fas fa-align-justify"></i></div>
+          <div class="nav_btn" (click)="openMenu()"><i class="fas fa-align-justify"></i> MENU</div>
+
+      </div>
+  </div>
+</nav>
+
+<p-sidebar [(visible)]="navbarState.showMenu" position="right" styleClass="menu_color menu_slideout">
+  <app-menu [navbarState]="navbarState"></app-menu>
+</p-sidebar>
+

@@ -1,0 +1,45 @@
+<div class="menu_color">
+
+  <!-- MENU HEADER -->
+  <div class="menu_header">
+    <div class="menu_box">
+      <div class="bar_1"></div>
+      <div class="bar_2"></div>
+      <div class="bar_3"></div>
+      <div class="menu_title font_color_1">{{environment.title}}</div>
+    </div>
+    <div class="menu_close" (click)="navbarState.showMenu = false"><i class="fas fa-times fa-fw"></i></div>
+  </div>
+  <!-- END MENU HEADER -->
+
+  <div class="font_color_1">
+    <!-- MENU LINKS -->
+    <div (click)="navigate([''])" class="menu_btn">
+      <span class="menu_icon"><i class="fas fa-home fa-fw"></i></span><span class="menu_link">Home</span>
+    </div>
+
+
+    <!-- ACCORDION BTN -->
+    <div (click)="accordion('test')" class="menu_btn">
+      <span class="menu_icon"><i class="fas fa-angle-double-down fa-fw"></i></span><span class="menu_link">Accordion Example</span>
+    </div>
+    <div class="menu_accordion" id="test">
+      <div (click)="navigate([''])" class="submenu_btn">
+        <i class="fas fa-rocket fa-fw"></i> Submenu Link 1
+      </div>
+      <div (click)="navigate([''])" class="submenu_btn">
+        <i class="fas fa-rocket fa-fw"></i> Submenu Link 2
+      </div>
+      <div (click)="navigate([''])" class="submenu_btn">
+        <i class="fas fa-rocket fa-fw"></i> Submenu Link 3
+      </div>
+    </div>
+    <!-- END ACCORDION BTN -->
+
+    <div (click)="doLogout()" class="menu_btn">
+      <span class="menu_icon"><i class="fas fa-times-circle fa-fw"></i></span><span class="menu_link">Logout</span>
+    </div>
+    <!-- MENU LINKS -->
+  </div>
+
+</div>

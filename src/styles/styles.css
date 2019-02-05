@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'https://styles.transcend.csra.io/v3.0.0-rc3/transcend.css';
+/*
+@import '../../../transcend-css/styles/backgrounds.css';
+@import '../../../transcend-css/styles/buttons.css';
+@import '../../../transcend-css/styles/codesnippet.css';
+@import '../../../transcend-css/styles/colors.css';
+@import '../../../transcend-css/styles/effects.css';
+@import '../../../transcend-css/styles/footer.css';
+@import '../../../transcend-css/styles/forms.css';
+@import '../../../transcend-css/styles/help.css';
+@import '../../../transcend-css/styles/layout.css';
+@import '../../../transcend-css/styles/montserrat.css';
+@import '../../../transcend-css/styles/navigation.css';
+@import '../../../transcend-css/styles/styles.css';
+@import '../../../transcend-css/styles/theme.css';
+@import '../../../transcend-css/styles/wac.css';
+@import '../../../transcend-css/styles/z_atmedia.css';
+*/
+
+.wily {
+  animation-direction: alternate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: movewily;
+  position: relative
+}
+
+@keyframes movewily {
+  0% {
+    left: 0;
+    top: 0
+  }
+  25% {
+    left: 900px;
+    top: 0
+  }
+  50% {
+    left: 400px;
+    top: 100px
+  }
+  75% {
+    left: 0;
+    top: 100px
+  }
+  to {
+    left: 0;
+    top: 30px
+  }
+}
+
+.megaman {
+  animation-direction: alternate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-name: movemegaman;
+  height: 100px;
+  position: relative;
+  width: 100px
+}
+
+@keyframes movemegaman {
+  0% {
+    left: 0;
+    top: 200px
+  }
+  25% {
+    left: 800px;
+    top: 200px
+  }
+  50% {
+    left: 100px;
+    top: 200px
+  }
+  75% {
+    left: 200px;
+    top: 200px
+  }
+  to {
+    left: 0;
+    top: 200px
+  }
+}
+
+.mega_bg {
+  background-image: url(https://media.giphy.com/media/sZHR8mLi3JB8Q/giphy.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%
+}
