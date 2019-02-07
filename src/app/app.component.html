@@ -9,9 +9,11 @@
   <app-footer></app-footer>
 </div>
 
-<wily-dialog title="Your Session is Expiring" [object]="showDialog" (closed)="resetTimer()" width="400px" height="200px" #timeoutDialog>
-  <div style="text-align: center;">
-    <div style="font-size: 24pt;">{{count}} seconds</div>
-    <button class="btn" (click)="resetTimer(true)">Click to stay logged in</button>
+<wily-dialog title="Your Session is Expiring" [object]="showDialog" (closed)="resetTimer()" width="350px" height="150px" #timeoutDialog>
+  <div class="center_center" style="height:100%;text-align:center;">
+    <div>
+      <div style="font-size: 24pt;">{{count}} seconds</div>
+      <button class="btn md t_go" (click)="resetTimer(true)">Click to stay logged in</button>
+    </div>
   </div>
 </wily-dialog>
