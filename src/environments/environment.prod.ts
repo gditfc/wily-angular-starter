@@ -14,5 +14,10 @@ export const environment = {
     RedirectUriSignOut : '',
     UserPoolId : '',
     AdvancedSecurityDataCollectionFlag : false
+  },
+  idleConfig: {
+    idle: 600,
+    timeout: 60,
+    ping: 600
   }
 };

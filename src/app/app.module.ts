@@ -8,7 +8,8 @@ import {
   LocalStorageService,
   PushContainerModule,
   ThemingModule,
-  ThemingService
+  ThemingService,
+  WilyDialogModule
 } from 'wily-angular-commons';
 
 import {AppComponent} from './app.component';
@@ -29,6 +30,8 @@ import {TabViewModule} from 'primeng/tabview';
 import {PageHeaderModule} from './shared/modules/page-header.module';
 import {AuthInterceptor} from './shared/interceptors/auth.interceptor';
 import {HomeDataService} from './home/services/home.data.service';
+import {UserIdleModule} from 'angular-user-idle';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,9 @@ import {HomeDataService} from './home/services/home.data.service';
     TabViewModule,
     ThemingModule,
     PageHeaderModule,
-    PushContainerModule
+    PushContainerModule,
+    WilyDialogModule,
+    UserIdleModule.forRoot(environment.idleConfig)
   ],
   providers: [
     {

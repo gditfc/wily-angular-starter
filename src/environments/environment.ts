@@ -12,12 +12,17 @@ export const environment = {
   helpProductKey: 'wily',
   helpSystemUrl: 'https://help.transcend.csra.io',
   authData: {
-    ClientId : '',
-    AppWebDomain : '',
-    TokenScopesArray : ['openid'],
-    RedirectUriSignIn : 'http://localhost:4200',
-    RedirectUriSignOut : 'http://localhost:4200',
-    UserPoolId : '',
-    AdvancedSecurityDataCollectionFlag : false
+    ClientId: '',
+    AppWebDomain: '',
+    TokenScopesArray: ['openid'],
+    RedirectUriSignIn: 'http://localhost:4200',
+    RedirectUriSignOut: 'http://localhost:4200',
+    UserPoolId: '',
+    AdvancedSecurityDataCollectionFlag: false
+  },
+  idleConfig: {
+    idle: 600,
+    timeout: 60,
+    ping: 600
   }
 };
