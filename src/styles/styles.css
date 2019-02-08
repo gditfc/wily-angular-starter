@@ -1,22 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'https://styles.transcend.csra.io/v3.0.0-rc3/transcend.css';
+@import 'https://styles.transcend.csra.io/v3.0.0-rc4/transcend.css';
+
 /*
-@import '../../../transcend-css/styles/backgrounds.css';
-@import '../../../transcend-css/styles/buttons.css';
-@import '../../../transcend-css/styles/codesnippet.css';
-@import '../../../transcend-css/styles/colors.css';
-@import '../../../transcend-css/styles/effects.css';
-@import '../../../transcend-css/styles/footer.css';
-@import '../../../transcend-css/styles/forms.css';
-@import '../../../transcend-css/styles/help.css';
-@import '../../../transcend-css/styles/layout.css';
-@import '../../../transcend-css/styles/montserrat.css';
-@import '../../../transcend-css/styles/navigation.css';
-@import '../../../transcend-css/styles/styles.css';
-@import '../../../transcend-css/styles/theme.css';
-@import '../../../transcend-css/styles/wac.css';
-@import '../../../transcend-css/styles/z_atmedia.css';
+@import '../../../wily-styles/styles/backgrounds.css';
+@import '../../../wily-styles/styles/buttons.css';
+@import '../../../wily-styles/styles/codesnippet.css';
+@import '../../../wily-styles/styles/colors.css';
+@import '../../../wily-styles/styles/effects.css';
+@import '../../../wily-styles/styles/externals.css';
+@import '../../../wily-styles/styles/footer.css';
+@import '../../../wily-styles/styles/forms.css';
+@import '../../../wily-styles/styles/help.css';
+@import '../../../wily-styles/styles/layout.css';
+@import '../../../wily-styles/styles/montserrat.css';
+@import '../../../wily-styles/styles/navigation.css';
+@import '../../../wily-styles/styles/styles.css';
+@import '../../../wily-styles/styles/theme.css';
+@import '../../../wily-styles/styles/wac.css';
+@import '../../../wily-styles/styles/z_atmedia.css';
 */
 
 .wily {
@@ -89,4 +91,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%
+}
+
+.timeout_container {
+  height:100%;
+  text-align:center;
+}
+
+.timeout_countdown {
+  font-size: 24pt;
+  margin-bottom: 5px;
+}
+
+.timeout_ok_btn {
+  margin: 0 auto;
 }
