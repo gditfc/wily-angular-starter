@@ -1,16 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Auth} from '../shared/services/auth.service';
 import {Router} from '@angular/router';
-import {NavbarState} from './models/navbar-state';
 import {UserService} from '../shared/services/user.service';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  navbarState: NavbarState = new NavbarState();
+  showMenu = false;
 
   constructor(
     private auth: Auth,
@@ -22,15 +21,16 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
-
-  doLogout() {
+  doLogout(): void {
     this.router.navigate(['/']).then(result => this.auth.logout());
   }
 
-  openMenu() {
-    this.navbarState.showMenu = true;
+  openMenu(): void {
+    this.showMenu = true;
+  }
+
+  closeMenu(): void {
+    this.showMenu = false;
   }
 
 }

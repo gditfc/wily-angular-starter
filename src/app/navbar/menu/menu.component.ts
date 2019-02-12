@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
-import {NavbarState} from '../models/navbar-state';
 import {Auth} from '../../shared/services/auth.service';
 import {environment} from '../../../environments/environment';
 
@@ -10,8 +9,8 @@ import {environment} from '../../../environments/environment';
 })
 export class MenuComponent implements OnInit {
 
-  @Input()
-  navbarState: NavbarState;
+  @Output()
+  close: EventEmitter<any> = new EventEmitter();
 
   environment = environment;
 
@@ -27,7 +26,7 @@ export class MenuComponent implements OnInit {
   navigate(route: any[]): void {
     this.router.navigate(route).then(
       () => {
-        this.navbarState.showMenu = false;
+        this.closeMenu();
       }
     );
   }
@@ -44,7 +43,12 @@ export class MenuComponent implements OnInit {
 
   }
 
+  closeMenu(): void {
+    this.close.emit();
+  }
+
   doLogout() {
+    this.closeMenu();
     this.router.navigate(['/']).then(result => this.auth.logout());
   }
 

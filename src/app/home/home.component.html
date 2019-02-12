@@ -2,6 +2,15 @@
     <div class="center_center">
       <div class="center">
         <button class="btn_pulse sm"  (click)="pushContainer.toggle()"><i class="fas fa-arrow-left"></i></button>
+        <wily-help-widget
+          productKey="pe"
+          elementKey="provider-dashboard"
+          [helpSystemUrl]="environment.helpSystemUrl"
+          [serviceUrl]="environment.helpServiceUrl"
+          [canEdit]="true"
+          theme="light"
+          fontSize="24px">
+        </wily-help-widget>
         <button class="btn_pulse sm"  (click)="pushContainerRight.toggle()"><i class="fas fa-arrow-right"></i></button>
       </div>
       <div class="font_color_1" style="position: absolute;text-align: center;margin-top:100px;padding:15px;">
