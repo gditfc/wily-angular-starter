@@ -1,45 +1,58 @@
-<div class="menu_color">
 
-  <!-- MENU HEADER -->
-  <div class="menu_header">
-    <div class="menu_box">
-      <div class="bar_1"></div>
-      <div class="bar_2"></div>
-      <div class="bar_3"></div>
-      <div class="menu_title font_color_1">{{environment.title}}</div>
-    </div>
-    <div class="menu_close" (click)="navbarState.showMenu = false"><i class="fas fa-times fa-fw"></i></div>
+<div class="menu_color main_logo_bg font_color_1">
+  <div class="gdit_bg">
+
+      <div class="menu_header">
+        <div class="left">
+          <div class="bar_1"></div>
+          <div class="bar_2"></div>
+          <div class="bar_3"></div>
+        </div>
+
+        <div class="space_between" style="align-items: center;width:100%;">
+          <div>
+            <div class="menu_title">{{environment.title}}</div>
+          </div>
+          <div>
+            <button class="btn_pulse xsm" style="margin:0 5px;" (click)="navbarState.showMenu = false"><i class="fas fa-times fa-fw"></i></button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div style="margin:5px;border-radius:5px;overflow: hidden;">
+        <div (click)="accordion('categories')" class="accordion_main menu_btn">
+          <span><i class="fa fa-list fa-fw"></i></span><span style="margin-left:5px;">Categories</span>
+        </div>
+        <div class="menu_accordion " id="categories">
+          <div class="accordion_sub submenu_btn">
+            <i class="fas fa-minus fa-fw"></i> Item #1
+          </div>
+          <div class="accordion_sub submenu_btn">
+            <i class="fas fa-plus fa-fw"></i> Item #2
+          </div>
+        </div>
+        <div (click)="accordion('temptations')" class="accordion_main menu_btn">
+          <span><i class="fa fa-list fa-fw"></i></span><span style="margin-left:5px;" aria-label="Temptations">Temptations</span>
+        </div>
+        <div class="menu_accordion " id="temptations">
+          <div class="accordion_sub submenu_btn" aria-label="item1">
+            <i class="fas fa-minus fa-fw"></i> Item #1
+          </div>
+          <div class="accordion_sub submenu_btn" aria-label="item2">
+            <i class="fas fa-plus fa-fw"></i> Item #2
+          </div>
+        </div>
+        <div (click)="doLogout()" class="menu_btn">
+          <i class="fas fa-power-off fa-fw"></i> Logout
+        </div>
+      </div>
+
+
+
+
+
   </div>
-  <!-- END MENU HEADER -->
-
-  <div class="font_color_1">
-    <!-- MENU LINKS -->
-    <div (click)="navigate([''])" class="menu_btn">
-      <span class="menu_icon"><i class="fas fa-home fa-fw"></i></span><span class="menu_link">Home</span>
-    </div>
-
-
-    <!-- ACCORDION BTN -->
-    <div (click)="accordion('test')" class="menu_btn">
-      <span class="menu_icon"><i class="fas fa-angle-double-down fa-fw"></i></span><span class="menu_link">Accordion Example</span>
-    </div>
-    <div class="menu_accordion" id="test">
-      <div (click)="navigate([''])" class="submenu_btn">
-        <i class="fas fa-rocket fa-fw"></i> Submenu Link 1
-      </div>
-      <div (click)="navigate([''])" class="submenu_btn">
-        <i class="fas fa-rocket fa-fw"></i> Submenu Link 2
-      </div>
-      <div (click)="navigate([''])" class="submenu_btn">
-        <i class="fas fa-rocket fa-fw"></i> Submenu Link 3
-      </div>
-    </div>
-    <!-- END ACCORDION BTN -->
-
-    <div (click)="doLogout()" class="menu_btn">
-      <span class="menu_icon"><i class="fas fa-times-circle fa-fw"></i></span><span class="menu_link">Logout</span>
-    </div>
-    <!-- MENU LINKS -->
-  </div>
-
 </div>
