@@ -1,8 +1,10 @@
 <div class="page-container page_shadow container_color mega_bg border_color">
     <div class="center_center">
       <div class="center">
-        <button class="btn_pulse sm"  (click)="pushContainer.toggle()"><i class="fas fa-arrow-left"></i></button>
-        <div class="btn_pulse sm">
+        <button class="btn_pulse sm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="btn_pulse sm" role="button" aria-label="View Page Help" >
           <wily-help-widget
             productKey="pe"
             elementKey="provider-dashboard"
@@ -13,7 +15,9 @@
             fontSize="24px">
           </wily-help-widget>
         </div>
-        <button class="btn_pulse sm"  (click)="pushContainerRight.toggle()"><i class="fas fa-arrow-right"></i></button>
+        <button class="btn_pulse sm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
       <div class="font_color_1" style="position: absolute;text-align: center;margin-top:100px;padding:15px;">
         <div>
@@ -24,8 +28,8 @@
       </div>
     </div>
 
-    <img src="../../assets/images/wily.gif" class="wily"/>
-    <img src="../../assets/images/megaman.gif" class="megaman"/>
+    <img src="../../assets/images/wily.gif" class="wily" alt="Dr. Wily" />
+    <img src="../../assets/images/megaman.gif" class="megaman" alt="Mega Man" />
 </div>
 
 <wily-push-container
