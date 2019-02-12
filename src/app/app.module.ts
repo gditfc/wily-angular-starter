@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+
 import {
   HelpWidgetModule,
   JsonInterceptor,
@@ -15,8 +16,8 @@ import {
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './home/home.component';
-import {NavbarComponent} from './navbar/navbar.component';
-import {FooterComponent} from './footer/footer.component';
+import {NavbarComponent} from './layout/navbar/navbar.component';
+import {FooterComponent} from './layout/footer/footer.component';
 import {Auth} from './shared/services/auth.service';
 import {AuthGuard} from './shared/guards/auth.guard';
 
@@ -24,7 +25,7 @@ import {AmChartsModule} from '@amcharts/amcharts3-angular';
 import {UserService} from './shared/services/user.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SidebarModule} from 'primeng/primeng';
-import {MenuComponent} from './navbar/menu/menu.component';
+import {MenuComponent} from './layout/menu/menu.component';
 import {GrowlModule} from 'primeng/growl';
 import {TabViewModule} from 'primeng/tabview';
 import {PageHeaderModule} from './shared/modules/page-header.module';
