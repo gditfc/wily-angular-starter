@@ -1,24 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* @import 'https://styles.transcend.csra.io/v3.0.0-rc4/transcend.css'; */
-
-
-@import '../../../wily_styles/styles/backgrounds.css';
-@import '../../../wily_styles/styles/buttons.css';
-@import '../../../wily_styles/styles/codesnippet.css';
-@import '../../../wily_styles/styles/colors.css';
-@import '../../../wily_styles/styles/effects.css';
-@import '../../../wily_styles/styles/externals.css';
-@import '../../../wily_styles/styles/footer.css';
-@import '../../../wily_styles/styles/forms.css';
-@import '../../../wily_styles/styles/help.css';
-@import '../../../wily_styles/styles/layout.css';
-@import '../../../wily_styles/styles/montserrat.css';
-@import '../../../wily_styles/styles/navigation.css';
-@import '../../../wily_styles/styles/styles.css';
-@import '../../../wily_styles/styles/theme.css';
-@import '../../../wily_styles/styles/wac.css';
-@import '../../../wily_styles/styles/z_atmedia.css';
+@import 'https://styles.transcend.csra.io/v3.0.0-rc5/transcend.css';
 
 .wily {
   animation-direction: alternate;
