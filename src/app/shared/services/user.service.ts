@@ -3,7 +3,7 @@ import {BaseDataService} from 'wily-angular-commons';
 import {environment} from '../../../environments/environment';
 import {UserModel} from '../models/user.model';
 import {HttpClient} from '@angular/common/http';
-import {Auth} from './auth.service';
+import {Auth} from '../security/auth.service';
 
 @Injectable()
 export class UserService extends BaseDataService {

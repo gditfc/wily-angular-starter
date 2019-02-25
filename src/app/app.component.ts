@@ -1,8 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {Auth} from './shared/services/auth.service';
 import {environment} from '../environments/environment';
 import {ThemingService, DialogComponent} from 'wily-angular-commons';
 import {UserIdleService} from 'angular-user-idle';
+import {Auth} from './shared/security/auth.service';
 
 @Component({
   selector: 'app-root',
