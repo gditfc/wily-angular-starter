@@ -1,23 +1,27 @@
-<nav class="nav_bar nav_color nav_shadow">
-  <div class="nav_wrap nav_gradient">
-    <div style="display:inline-flex;">
-      <div style="display: inline-flex;">
-        <div class="bar_1"></div>
-        <div class="bar_2"></div>
-        <div class="bar_3"></div>
+<nav class="nav_color nav_gradient nav_shadow">
+
+  <div class="row">
+    <div class="nav_v_bars">
+      <div class="nav_v_bar_color1"></div>
+      <div class="nav_v_bar_color2"></div>
+      <div class="nav_v_bar_color3"></div>
+    </div>
+    <div routerLink="" aria-label="Home" class="nav_logo_box" style="align-items: center">
+      <div class="nav_logo"></div>
+      <div class="nav_title_box">
+        <div class="nav_title">{{environment.title}}</div>
+        <div class="nav_subtitle">{{environment.subtitle}}</div>
       </div>
-      <a routerLink="" aria-label="Home">
-        <div class="logo"></div>
-      </a>
     </div>
-    <div class="center_center">
-      <div class="mobile_btn" (click)="openMenu()"><i class="fas fa-align-justify"></i></div>
-      <div class="nav_btn" (click)="openMenu()"><i class="fas fa-align-justify"></i> MENU</div>
-    </div>
+  </div>
+  <div class="center_right nav_menu_bar">
+    <div class="nav_name">Hello {{user.name}} {{user.given_name}}!</div>
+    <div class="btn_pulse sm" style="margin-right:4px;margin-left:2px;" aria-label="Personalization"><i class="fas fa-user"></i></div>
+    <div class="btn_pulse sm" style="margin-right:4px;" aria-label="Inbox"><i class="fas fa-envelope"></i></div>
+    <div class="btn_pulse sm" style="margin-right:2px;" aria-label="Menu" (click)="openMenu()"><i class="fas fa-align-justify"></i></div>
   </div>
 </nav>
 
 <p-sidebar [(visible)]="showMenu" position="right" styleClass="menu_color menu_slideout">
   <app-menu (close)="closeMenu()"></app-menu>
 </p-sidebar>
-

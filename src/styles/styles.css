@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'https://styles.transcend.csra.io/v3.0.0-rc10/transcend.css';
+@import 'https://styles.transcend.csra.io/v3.0.0-rc17/transcend.css';
 
 .wily {
   animation-direction: alternate;
@@ -72,4 +72,74 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%
+}
+.slideout_menu_header{
+  display:flex;
+  align-items:center;
+  padding:0 5px;
+  font-size:14pt;
+  font-weight:400;
+  background-color:rgba(0,0,0,0.4);
+  min-height:40px;
+  color:#FFF;
+}
+.header1{
+  font-size:14pt;
+  padding:5px;
+  color:#777;
+}
+
+.filter_btn{
+  position:fixed;
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top:50px;
+  left:0;
+  margin-left:-45px;
+  transform:rotate(90deg);
+  transition:all 0.2s ease-in-out;
+  background-color:#888;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+  color:#FFF;
+  padding:5px 10px;
+  font-size:10pt;
+  width:75px;
+  height:30px;
+  cursor:pointer;
+  user-select: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.filter_btn:hover{
+  background-color:deepskyblue;
+  margin-left:-40px;
+}
+
+
+.push_container_color {
+  background-color: deepskyblue;
+  color: #222;
+}
+.left_push{
+  padding:0;
+}
+
+.dialog_header_color {
+  background-color: slategrey;
+  color: #FFF;
+}
+
+.dialog_body_color {
+  background-color: #FFF;
+  color: #222;
+}
+.row.color{
+  border:1px solid #DEDEDE;
+  background-color: #EFEFEF;
+}
+.col.color{
+  border:1px solid #DEDEDE;
+  background-color: #FFFFFF;
 }

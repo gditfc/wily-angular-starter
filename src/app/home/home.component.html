@@ -1,53 +1,71 @@
-<div class="page_container gradient page_shadow container_color top_left">
-    <div class="center_center">
-      <div class="center">
-        <button class="btn_pulse sm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <div class="btn_pulse sm" role="button" aria-label="View Page Help" >
-          <wily-help-widget
-            productKey="pe"
-            elementKey="provider-dashboard"
-            [helpSystemUrl]="environment.helpSystemUrl"
-            [serviceUrl]="environment.helpServiceUrl"
-            [canEdit]="true"
-            theme="light"
-            fontSize="24px">
-          </wily-help-widget>
+<div aria-label="Open Left Slideout" (click)="pushContainer.toggle()" class="filter_btn">
+  <div><i class="fas fa-align-justify" data-fa-transform="rotate-270"></i></div><div>Filter</div>
+</div>
+
+<div class="page_container page_shadow top_left mega_bg">
+    <div class="row_block">
+      <div class="center_center">
+          <div class="font_color_1" style="position: absolute;text-align: center;margin-top:100px;padding:15px;">
+            <div class="center_center">
+              <button class="btn_pulse xsm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="btn_pulse xsm" role="button" aria-label="View Page Help" >
+                <wily-help-widget
+                  productKey="pe"
+                  elementKey="provider-dashboard"
+                  [helpSystemUrl]="environment.helpSystemUrl"
+                  [serviceUrl]="environment.helpServiceUrl"
+                  [canEdit]="true"
+                  theme="light"
+                  fontSize="24px">
+                </wily-help-widget>
+              </div>
+              <button class="btn_pulse xsm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            <div>
+              <div style="font-size:26pt;">Welcome to Wily</div>
+              <div style="font-size:14pt;font-weight:500;">A Highly Customizable Angular Framework and Fully Responsive CSS Flexbox UI Starter Project.</div>
+              <div style="font-size:10pt;padding-top:5px;">Far from being a madman, Dr. Wily was the only one who saw the truth.</div>
+            </div>
+          </div>
         </div>
-        <button class="btn_pulse sm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-      <div class="font_color_1" style="position: absolute;text-align: center;margin-top:100px;padding:15px;">
-        <div>
-          <div style="font-size:26pt;">Welcome to Wily</div>
-          <div style="font-size:14pt;font-weight:500;">A Highly Customizable Angular Framework and Fully Responsive CSS Flexbox UI Starter Project.</div>
-          <div style="font-size:10pt;padding-top:5px;">Far from being a madman, Dr. Wily was the only one who saw the truth.</div>
-        </div>
-      </div>
-    </div>
 
     <img src="../../assets/images/wily.gif" class="wily" alt="Dr. Wily" />
     <img src="../../assets/images/megaman.gif" class="megaman" alt="Mega Man" />
 </div>
+</div>
 
 <wily-push-container
-  mainContentId="site-content"
-  side="left"
-  topOffset="40px"
-  [closeOnResize]="false"
-  [showSidePanel]="false"
-  #pushContainer>
-  <div>A Container of Coolness that Pushes</div>
+    mainContentId="site-content"
+    side="left"
+    topOffset="40px"
+    [closeOnResize]="false"
+    [showSidePanel]="true"
+    backgroundColorClass="push_container_color left_push"
+    #pushContainer>
+    <div class="slideout_menu_margin">
+      <div class="slideout_menu_header">
+        <div><i class="fas fa-file-alt fa-fw" style="font-size:11pt;"></i> Left Menu</div>
+      </div>
+      <div>Content</div>
+    </div>
 </wily-push-container>
-
 <wily-push-container
   mainContentId="site-content"
   side="right"
   topOffset="40px"
   [closeOnResize]="false"
-  [showSidePanel]="false"
+  [showSidePanel]="true"
+  backgroundColorClass="push_container_color left_push"
   #pushContainerRight>
-  <div>A Container of Coolness that Pushes</div>
+  <div class="slideout_menu_margin">
+    <div class="slideout_menu_header">
+      <div><i class="fas fa-file-alt fa-fw" style="font-size:11pt;"></i> Right Menu</div>
+    </div>
+    <div>Content</div>
+  </div>
 </wily-push-container>
+

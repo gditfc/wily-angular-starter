@@ -1,7 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
-import {environment} from '../../../environments/environment';
 import {Auth} from '../../shared/security/auth.service';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-menu',
