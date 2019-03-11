@@ -80,3 +80,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 import 'core-js/es7/array';
+
+// Add global to window, assigning the value of window itself.
+(window as any).global = window;
