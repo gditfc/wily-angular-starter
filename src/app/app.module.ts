@@ -15,7 +15,6 @@ import {SidebarModule} from 'primeng/primeng';
 import {MenuComponent} from './layout/menu/menu.component';
 import {GrowlModule} from 'primeng/growl';
 import {TabViewModule} from 'primeng/tabview';
-import {PageHeaderModule} from './shared/modules/page-header.module';
 import {HomeDataService} from './home/services/home.data.service';
 import {UserIdleModule} from 'angular-user-idle';
 import {environment} from '../environments/environment';
@@ -52,7 +51,6 @@ import {
     GrowlModule,
     TabViewModule,
     ThemingModule,
-    PageHeaderModule,
     PushContainerModule,
     WilyDialogModule,
     CognitoModule,

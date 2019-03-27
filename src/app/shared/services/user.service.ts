@@ -1,9 +1,10 @@
-import {Injectable} from '@angular/core';
-import {BaseDataService} from 'wily-angular-commons';
+import {Injectable, Renderer2, RendererFactory2} from '@angular/core';
+import {BaseDataService, Theme} from 'wily-angular-commons';
 import {environment} from '../../../environments/environment';
 import {UserModel} from '../models/user.model';
 import {HttpClient} from '@angular/common/http';
 import {Auth} from '../security/auth.service';
+import {ThemingService} from './theming.service';
 
 @Injectable()
 export class UserService extends BaseDataService {
@@ -11,11 +12,16 @@ export class UserService extends BaseDataService {
   private HELP_TEXT_EDITOR = 'help_text_editor';
   private user: UserModel;
 
+  private renderer: Renderer2;
+
   constructor(
     protected http: HttpClient,
-    private auth: Auth
+    private auth: Auth,
+    private themingService: ThemingService,
+    private rendererFactory: RendererFactory2
   ) {
     super(http);
+    this.renderer = rendererFactory.createRenderer(null, null);
   }
 
   getBaseUrl(): string {
@@ -49,6 +55,22 @@ export class UserService extends BaseDataService {
     }
 
     return false;
+  }
+
+  getTheme(): Theme {
+    return this.themingService.getTheme();
+  }
+
+  addBackgroundClass(backgroundClass?: string): void {
+    if (backgroundClass) {
+      this.renderer.addClass(document.body, backgroundClass);
+    }
+  }
+
+  removeBackgroundClass(backgroundClass?: string): void {
+    if (backgroundClass) {
+      this.renderer.removeClass(document.body, backgroundClass);
+    }
   }
 
 }
