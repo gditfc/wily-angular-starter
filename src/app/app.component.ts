@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.themingService.appInit(environment.helpProductKey, environment.helpServiceUrl);
+    this.themingService.appInit(environment.appManagement.productKey, environment.appManagement.serviceUrl);
     this.initTimeout();
   }
 

@@ -1,10 +1,9 @@
 import {Injectable, Renderer2, RendererFactory2} from '@angular/core';
-import {BaseDataService, Theme} from 'wily-angular-commons';
+import {BaseDataService, Theme, ThemingService} from 'wily-angular-commons';
 import {environment} from '../../../environments/environment';
 import {UserModel} from '../models/user.model';
 import {HttpClient} from '@angular/common/http';
 import {Auth} from '../security/auth.service';
-import {ThemingService} from './theming.service';
 
 @Injectable()
 export class UserService extends BaseDataService {

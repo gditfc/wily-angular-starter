@@ -1,24 +1,17 @@
-<div aria-label="Open Left Slideout" (click)="pushContainer.toggle()" class="filter_btn">
-  <div><i class="fas fa-align-justify" data-fa-transform="rotate-270"></i></div><div>Filter</div>
-</div>
-
 <div class="page_container page_shadow top_left mega_bg">
     <div class="row_block">
       <div class="center_center">
-          <div class="font_color_1" style="position: absolute;text-align: center;margin-top:100px;padding:15px;">
+          <div style="position: absolute;text-align: center;margin-top:100px;padding:15px; color: #FFF;">
             <div class="center_center">
               <button class="btn_pulse xsm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
                 <i class="fas fa-arrow-left"></i>
               </button>
               <div class="btn_pulse xsm" role="button" aria-label="View Page Help" >
                 <wily-help-widget
-                  productKey="pe"
-                  elementKey="provider-dashboard"
-                  [helpSystemUrl]="environment.helpSystemUrl"
-                  [serviceUrl]="environment.helpServiceUrl"
-                  [canEdit]="true"
-                  theme="light"
-                  fontSize="24px">
+                  [productKey]="environment.appManagement.productKey"
+                  helpKey="theme_home"
+                  [baseServiceUrl]="environment.appManagement.serviceUrl"
+                  [canEdit]="true">
                 </wily-help-widget>
               </div>
               <button class="btn_pulse xsm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
