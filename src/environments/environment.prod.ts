@@ -3,9 +3,10 @@ export const environment = {
   title: 'Wily Starter Project',
   whitelistUrls: ['services.transcend.csra.io'],
   baseUrl: 'https://services.transcend.csra.io/wily/api',
-  helpServiceUrl: 'https://services.transcend.csra.io/help',
-  helpProductKey: 'wily',
-  helpSystemUrl: 'https://help.transcend.csra.io',
+  appManagement: {
+    serviceUrl: '',
+    productKey: ''
+  },
   authData: {
     ClientId : '',
     AppWebDomain : '',
