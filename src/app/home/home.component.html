@@ -1,34 +1,35 @@
 <div class="page_container page_shadow top_left mega_bg">
-    <div class="row_block">
-      <div class="center_center">
-          <div style="position: absolute;text-align: center;margin-top:100px;padding:15px; color: #FFF;">
-            <div class="center_center">
-              <button class="btn_pulse xsm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-              <div class="btn_pulse xsm" role="button" aria-label="View Page Help" >
-                <wily-help-widget
-                  [productKey]="environment.appManagement.productKey"
-                  helpKey="theme_home"
-                  [baseServiceUrl]="environment.appManagement.serviceUrl"
-                  [canEdit]="true">
-                </wily-help-widget>
-              </div>
-              <button class="btn_pulse xsm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
-                <i class="fas fa-arrow-right"></i>
-              </button>
+  <div class="row_block">
+    <div class="center_center">
+        <div style="position: absolute;text-align: center;margin-top:100px;padding:15px; color: #FFF;">
+          <div class="center_center">
+            <button class="btn_pulse xsm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="btn_pulse xsm" role="button" aria-label="View Page Help" >
+              <wily-help-widget
+                [productKey]="environment.appManagement.productKey"
+                helpKey="theme_home"
+                [baseServiceUrl]="environment.appManagement.serviceUrl"
+                [canEdit]="true">
+              </wily-help-widget>
             </div>
-            <div>
-              <div style="font-size:26pt;">Welcome to Wily</div>
-              <div style="font-size:14pt;font-weight:500;">A Highly Customizable Angular Framework and Fully Responsive CSS Flexbox UI Starter Project.</div>
-              <div style="font-size:10pt;padding-top:5px;">Far from being a madman, Dr. Wily was the only one who saw the truth.</div>
-            </div>
+            <button class="btn_pulse xsm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div>
+            <div style="font-size:26pt;">Welcome to Wily</div>
+            <div style="font-size:14pt;font-weight:500;">A Highly Customizable Angular Framework and Fully Responsive CSS Flexbox UI Starter Project.</div>
+            <div style="font-size:10pt;padding-top:5px;">Far from being a madman, Dr. Wily was the only one who saw the truth.</div>
           </div>
         </div>
+      </div>
 
     <img src="../../assets/images/wily.gif" class="wily" alt="Dr. Wily" />
     <img src="../../assets/images/megaman.gif" class="megaman" alt="Mega Man" />
-</div>
+
+  </div>
 </div>
 
 <wily-push-container
@@ -46,6 +47,7 @@
       <div>Content</div>
     </div>
 </wily-push-container>
+
 <wily-push-container
   mainContentId="site-content"
   side="right"
