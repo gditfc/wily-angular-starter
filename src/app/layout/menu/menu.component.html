@@ -15,35 +15,35 @@
     </div>
 
     <div class="menu_group">
-      <div (click)="accordion('categories')" class="accordion_main menu_btn" role="button" aria-label="Categories">
+      <div (click)="accordion('categories')" (keyup.enter)="accordion('categories')" tabindex="0" class="accordion_main menu_btn" role="button" aria-label="Categories">
         <div><i class="fas fa-list fa-fw"></i></div>
         <div style="margin-left:5px;">Categories</div>
       </div>
       <div class="menu_accordion " id="categories">
-        <div class="accordion_sub submenu_btn" role="button" aria-label="Themes">
+        <div class="accordion_sub submenu_btn" tabindex="0" role="button" aria-label="Themes">
           <div><i class="fas fa-minus fa-fw"></i></div>
           <div>Themes</div>
         </div>
-        <div class="accordion_sub submenu_btn" role="button" aria-label="Help System">
+        <div class="accordion_sub submenu_btn" tabindex="0" role="button" aria-label="Help System">
           <div><i class="fas fa-minus fa-fw"></i></div>
           <div>Help System</div>
         </div>
       </div>
-      <div (click)="accordion('preferences')" class="accordion_main menu_btn" role="button" aria-label="Preferences">
+      <div (click)="accordion('preferences')" (keyup.enter)="accordion('preferences')" tabindex="0" class="accordion_main menu_btn" role="button" aria-label="Preferences">
         <div><i class="fas fa-cog fa-fw"></i></div>
         <div style="margin-left:5px;" aria-label="Preferences">Preferences</div>
       </div>
       <div class="menu_accordion " id="preferences">
-        <div class="accordion_sub submenu_btn" role="button" aria-label="Themes">
+        <div class="accordion_sub submenu_btn" tabindex="0" role="button" aria-label="Themes">
           <div><i class="fas fa-minus fa-fw"></i></div>
           <div>Themes</div>
         </div>
-        <div class="accordion_sub submenu_btn" role="button" aria-label="Help System">
+        <div class="accordion_sub submenu_btn" tabindex="0" role="button" aria-label="Help System">
           <div><i class="fas fa-minus fa-fw"></i></div>
           <div>Help System</div>
         </div>
       </div>
-      <div (click)="doLogout()" class="menu_btn" role="button" aria-label="Logout">
+      <div (click)="doLogout()" (keyup.enter)="doLogout()" tabindex="0" class="menu_btn" role="button" aria-label="Logout">
         <div><i class="fas fa-power-off fa-fw"></i></div>
         <div style="margin-left:5px;">Logout</div>
       </div>
