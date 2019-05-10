@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   title: 'Wily Starter Project',
+  subtitle: '',
   whitelistUrls: ['localhost:8080'],
   baseUrl: 'http://localhost:8080/wily/api',
   appManagement: {

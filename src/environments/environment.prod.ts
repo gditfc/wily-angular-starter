@@ -6,6 +6,7 @@
 export const environment = {
   production: true,
   title: 'Wily Starter Project',
+  subtitle: '',
   whitelistUrls: ['services.transcend.csra.io'],
   baseUrl: 'https://services.transcend.csra.io/wily/api',
   appManagement: {

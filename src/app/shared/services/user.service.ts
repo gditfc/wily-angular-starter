@@ -1,5 +1,6 @@
 import {Injectable, Renderer2, RendererFactory2} from '@angular/core';
-import {BaseDataService, Theme, ThemingService} from 'wily-angular-commons';
+import {BaseDataService} from 'wily-angular-commons';
+import {Theme, ThemingService} from 'transcend-angular-commons';
 import {environment} from '../../../environments/environment';
 import {UserModel} from '../models/user.model';
 import {HttpClient} from '@angular/common/http';

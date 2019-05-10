@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {environment} from '../environments/environment';
-import {ThemingService, DialogComponent} from 'wily-angular-commons';
+import {DialogComponent} from 'wily-angular-commons';
+import {ThemingService} from 'transcend-angular-commons';
 import {UserIdleService} from 'angular-user-idle';
 import {Auth} from './shared/security/auth.service';
 

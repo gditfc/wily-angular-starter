@@ -21,14 +21,17 @@ import {environment} from '../environments/environment';
 import {CognitoModule} from './shared/security/cognito.module';
 
 import {
-  HelpWidgetModule,
   JsonInterceptor,
   LocalStorageService,
-  PushContainerModule,
-  ThemingModule,
-  ThemingService,
+  WilyPushContainerModule,
   WilyDialogModule
 } from 'wily-angular-commons';
+
+import {
+  TranscendHelpModule,
+  TranscendThemesModule,
+  ThemingService,
+} from 'transcend-angular-commons';
 
 @NgModule({
   declarations: [
@@ -45,13 +48,13 @@ import {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HelpWidgetModule,
+    TranscendHelpModule,
     AmChartsModule,
     SidebarModule,
     GrowlModule,
     TabViewModule,
-    ThemingModule,
-    PushContainerModule,
+    TranscendThemesModule,
+    WilyPushContainerModule,
     WilyDialogModule,
     CognitoModule,
     UserIdleModule.forRoot(environment.idleConfig)
