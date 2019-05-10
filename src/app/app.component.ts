@@ -11,9 +11,19 @@ import {Auth} from './shared/security/auth.service';
 })
 export class AppComponent implements OnInit {
 
+  /**
+   * The number of seconds until the user's session expires.
+   */
   count = 0;
+
+  /**
+   * Controls display of the timeout dialog. Dialog is displayed when truthy.
+   */
   showDialog: any;
 
+  /**
+   * The timeout dialog displayed when the user's session is nearing expiration.
+   */
   @ViewChild('timeoutDialog')
   timeoutDialog: DialogComponent;
 
@@ -47,6 +57,10 @@ export class AppComponent implements OnInit {
     this.userIdle.onTimeout().subscribe(() => this.auth.logout());
   }
 
+  /**
+   * Reset user idle timer.
+   * @param {boolean} doClose  Closes the timeout dialog when true.
+   */
   public resetTimer(doClose?: boolean): void {
     this.userIdle.resetTimer();
     this.showDialog = null;
