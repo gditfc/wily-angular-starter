@@ -9,10 +9,6 @@ export const environment = {
   subtitle: '',
   whitelistUrls: ['services.transcend.csra.io'],
   baseUrl: 'https://services.transcend.csra.io/wily/api',
-  appManagement: {
-    serviceUrl: '',
-    productKey: ''
-  },
   authData: {
     ClientId : '',
     AppWebDomain : '',

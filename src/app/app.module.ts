@@ -27,12 +27,6 @@ import {
   WilyDialogModule
 } from 'wily-angular-commons';
 
-import {
-  TranscendHelpModule,
-  TranscendThemesModule,
-  ThemingService,
-} from 'transcend-angular-commons';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,12 +42,10 @@ import {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    TranscendHelpModule,
     AmChartsModule,
     SidebarModule,
     GrowlModule,
     TabViewModule,
-    TranscendThemesModule,
     WilyPushContainerModule,
     WilyDialogModule,
     CognitoModule,
@@ -67,7 +59,6 @@ import {
     },
     UserService,
     LocalStorageService,
-    ThemingService,
     HomeDataService
   ],
   bootstrap: [AppComponent]

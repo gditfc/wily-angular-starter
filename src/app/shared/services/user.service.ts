@@ -1,6 +1,5 @@
 import {Injectable, Renderer2, RendererFactory2} from '@angular/core';
 import {BaseDataService} from 'wily-angular-commons';
-import {Theme, ThemingService} from 'transcend-angular-commons';
 import {environment} from '../../../environments/environment';
 import {UserModel} from '../models/user.model';
 import {HttpClient} from '@angular/common/http';
@@ -17,7 +16,6 @@ export class UserService extends BaseDataService {
   constructor(
     protected http: HttpClient,
     private auth: Auth,
-    private themingService: ThemingService,
     private rendererFactory: RendererFactory2
   ) {
     super(http);
@@ -55,10 +53,6 @@ export class UserService extends BaseDataService {
     }
 
     return false;
-  }
-
-  getTheme(): Theme {
-    return this.themingService.getTheme();
   }
 
   addBackgroundClass(backgroundClass?: string): void {
