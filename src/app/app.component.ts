@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   /**
    * The timeout dialog displayed when the user's session is nearing expiration.
    */
-  @ViewChild('timeoutDialog')
+  @ViewChild('timeoutDialog', { static: true })
   timeoutDialog: DialogComponent;
 
   constructor(
