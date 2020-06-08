@@ -35,6 +35,7 @@
     "primeng": "^7.1.0",
     "quill": "^1.3.6",
     "rxjs": "^6.5.3",
+    "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
     "wily-angular-commons": "^8.1.0",
     "zone.js": "^0.10.3"
