@@ -8,7 +8,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './layout/navbar/navbar.component';
 import {FooterComponent} from './layout/footer/footer.component';
-import {AmChartsModule} from '@amcharts/amcharts3-angular';
 import {UserService} from './shared/services/user.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SidebarModule} from 'primeng/primeng';
@@ -42,7 +41,6 @@ import {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AmChartsModule,
     SidebarModule,
     GrowlModule,
     TabViewModule,
