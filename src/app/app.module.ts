@@ -10,9 +10,8 @@ import {NavbarComponent} from './layout/navbar/navbar.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {UserService} from './shared/services/user.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SidebarModule} from 'primeng/primeng';
+import {SidebarModule} from 'primeng';
 import {MenuComponent} from './layout/menu/menu.component';
-import {GrowlModule} from 'primeng/growl';
 import {TabViewModule} from 'primeng/tabview';
 import {HomeDataService} from './home/services/home.data.service';
 import {UserIdleModule} from 'angular-user-idle';
@@ -42,7 +41,6 @@ import {
     FormsModule,
     ReactiveFormsModule,
     SidebarModule,
-    GrowlModule,
     TabViewModule,
     WilyPushContainerModule,
     WilyDialogModule,
