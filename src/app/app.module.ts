@@ -16,7 +16,6 @@ import {TabViewModule} from 'primeng/tabview';
 import {HomeDataService} from './home/services/home.data.service';
 import {UserIdleModule} from 'angular-user-idle';
 import {environment} from '../environments/environment';
-import {CognitoModule} from './shared/security/cognito.module';
 
 import {
   JsonInterceptor,
@@ -44,7 +43,6 @@ import {
     TabViewModule,
     WilyPushContainerModule,
     WilyDialogModule,
-    CognitoModule,
     UserIdleModule.forRoot(environment.idleConfig)
   ],
   providers: [

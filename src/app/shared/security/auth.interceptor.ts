@@ -1,14 +1,11 @@
 import {Injectable} from '@angular/core';
 import {environment} from '../../../environments/environment';
 import {Auth} from './auth.service';
-import {CognitoAuthInterceptor} from 'wily-angular-commons';
 
 @Injectable()
-export class AuthInterceptor extends CognitoAuthInterceptor {
+export class AuthInterceptor {
 
-  constructor(protected auth: Auth) {
-    super(auth);
-  }
+  constructor(protected auth: Auth) { }
 
   getWhitelistUrls(): Array<string> {
     return environment.whitelistUrls;

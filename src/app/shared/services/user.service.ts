@@ -27,7 +27,7 @@ export class UserService extends BaseDataService {
   }
 
   getUser() {
-    const user = this.auth.getUser();
+    const user = {} as UserModel;
 
     if (user) {
       return user;
