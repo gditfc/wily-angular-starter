@@ -1,7 +1,8 @@
 import {environment} from '../../../environments/environment';
 import {UserService} from '../services/user.service';
-import {HostBinding, OnDestroy, OnInit} from '@angular/core';
+import { HostBinding, OnDestroy, OnInit, Directive } from '@angular/core';
 
+@Directive()
 export abstract class ParentComponent implements OnInit, OnDestroy {
 
   @HostBinding('@containerAnimation')
