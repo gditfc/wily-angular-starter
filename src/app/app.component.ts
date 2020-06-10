@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     });
 
     // Start watch when time is up.
-    this.userIdle.onTimeout().subscribe(() => this.auth.logout());
+    this.userIdle.onTimeout().subscribe(() => console.log('logout'));
   }
 
   /**

@@ -47,9 +47,4 @@ export class MenuComponent implements OnInit {
     this.close.emit();
   }
 
-  doLogout() {
-    this.closeMenu();
-    this.router.navigate(['/']).then(result => this.auth.logout());
-  }
-
 }

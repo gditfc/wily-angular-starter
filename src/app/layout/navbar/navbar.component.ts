@@ -25,10 +25,6 @@ export class NavbarComponent {
     }
   }
 
-  doLogout(): void {
-    this.router.navigate(['/']).then(result => this.auth.logout());
-  }
-
   openMenu(): void {
     this.showMenu = true;
   }
