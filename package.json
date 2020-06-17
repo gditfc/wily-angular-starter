@@ -37,7 +37,7 @@
     "rxjs": "^6.5.5",
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
-    "wily-angular-commons": "^9.0.1",
+    "wily-angular-commons": "^9.0.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
