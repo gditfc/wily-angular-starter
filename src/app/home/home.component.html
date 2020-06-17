@@ -6,14 +6,6 @@
             <button class="btn_pulse xsm" aria-label="Open Left Slideout" (click)="pushContainer.toggle()">
               <i class="fas fa-arrow-left"></i>
             </button>
-            <div class="btn_pulse xsm" role="button" aria-label="View Page Help" >
-              <wily-help-widget
-                [productKey]="environment.appManagement.productKey"
-                helpKey="theme_home"
-                [baseServiceUrl]="environment.appManagement.serviceUrl"
-                [canEdit]="true">
-              </wily-help-widget>
-            </div>
             <button class="btn_pulse xsm" aria-label="Open Right Slideout"  (click)="pushContainerRight.toggle()">
               <i class="fas fa-arrow-right"></i>
             </button>

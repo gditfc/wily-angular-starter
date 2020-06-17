@@ -9,10 +9,6 @@ export const environment = {
   subtitle: '',
   whitelistUrls: ['localhost:8080'],
   baseUrl: 'http://localhost:8080/wily/api',
-  appManagement: {
-    serviceUrl: '',
-    productKey: ''
-  },
   authData: {
     ClientId: '',
     AppWebDomain: '',

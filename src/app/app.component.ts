@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {environment} from '../environments/environment';
 import {DialogComponent} from 'wily-angular-commons';
-import {ThemingService} from 'transcend-angular-commons';
 import {UserIdleService} from 'angular-user-idle';
 import {Auth} from './shared/security/auth.service';
 
@@ -24,18 +23,16 @@ export class AppComponent implements OnInit {
   /**
    * The timeout dialog displayed when the user's session is nearing expiration.
    */
-  @ViewChild('timeoutDialog')
+  @ViewChild('timeoutDialog', { static: true })
   timeoutDialog: DialogComponent;
 
   constructor(
     private auth: Auth,
-    private themingService: ThemingService,
     private userIdle: UserIdleService
   ) {
   }
 
   ngOnInit() {
-    this.themingService.appInit(environment.appManagement.productKey, environment.appManagement.serviceUrl);
     this.initTimeout();
   }
 
@@ -54,7 +51,7 @@ export class AppComponent implements OnInit {
     });
 
     // Start watch when time is up.
-    this.userIdle.onTimeout().subscribe(() => this.auth.logout());
+    this.userIdle.onTimeout().subscribe(() => console.log('logout'));
   }
 
   /**

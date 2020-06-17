@@ -1,7 +1,8 @@
 import {environment} from '../../../environments/environment';
 import {UserService} from '../services/user.service';
-import {HostBinding, OnDestroy, OnInit} from '@angular/core';
+import { HostBinding, OnDestroy, OnInit, Directive } from '@angular/core';
 
+@Directive()
 export abstract class ParentComponent implements OnInit, OnDestroy {
 
   @HostBinding('@containerAnimation')
@@ -28,11 +29,7 @@ export abstract class ParentComponent implements OnInit, OnDestroy {
     return this.userService.isHelpTextUser();
   }
 
-  ngOnInit(): void {
-    if (this.userService.getTheme().backgroundImages === 'Y') {
-      this.addBackgroundClass();
-    }
-  }
+  ngOnInit(): void {}
 
   protected addBackgroundClass(): void {
     this.userService.addBackgroundClass(this.getBackgroundClass());

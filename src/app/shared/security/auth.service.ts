@@ -1,19 +1,13 @@
 import {Injectable, Injector} from '@angular/core';
-import {CognitoAuth, CognitoAuthSession} from 'amazon-cognito-auth-js';
 import {Router} from '@angular/router';
 import {environment} from '../../../environments/environment';
-import {CognitoAuthService} from 'wily-angular-commons';
 
 @Injectable({
   providedIn: 'root'
 })
-export class Auth extends CognitoAuthService {
+export class Auth {
 
-  public constructor(
-    private injector: Injector
-  ) {
-    super();
-  }
+  public constructor(private injector: Injector) { }
 
   getAuthData(): any {
     return environment.authData;
